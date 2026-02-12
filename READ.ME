@@ -1,0 +1,24 @@
+# API Testing — Postman + Newman
+
+Postman-first API testing project showcasing:
+- Postman collections & environments
+- Automated execution via Newman
+- CI execution via GitHub Actions
+- A workflow that runs locally (VS Code terminal) and in CI
+
+## Prerequisites
+- Node.js (LTS)
+- Newman (`npm i -g newman`)
+- (Optional) Newman HTML reporter (see below)
+
+## Project structure
+- `collections/` — Postman collection exports
+- `environments/` — Postman environment exports
+- `data/` — data-driven inputs (JSON/CSV)
+- `newman/` — local run scripts
+- `reports/` — generated reports (gitignored)
+- `.github/workflows/` — CI pipelines
+
+## Quickstart (local)
+```bash
+newman run collections/sample.postman_collection.json -e environments/dev.postman_environment.json
