@@ -1,0 +1,4 @@
+﻿# Newman reports
+reports/
+newman/*.xml
+newman/*.html
